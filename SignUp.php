@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+if(isset($_POST["signup"])){           
+    echo "Signed Up:Thank You";
+}
+
+?>
 <html >
 <head>
     
@@ -54,7 +59,7 @@
            border: none;
            border-bottom: 1px solid peru ;
        }
-       .CenterBox form input[type="button"] {
+       .CenterBox form input[type="submit"] {
            color: rgb(0, 0, 0);
            background-color:coral;
            height: 40px;
@@ -77,19 +82,19 @@
         <div  class="CenterBox" >
                     
        
-            <form  >
+            <form  method="POST" >
                
                 <img src="MyProjectLogom (2).png" title="Logo" style="width: 120px; height: 80px; margin: auto; padding-top: 10px; ">
                 <h3> Sign Up </h3>
                 <h3>Enter Your Detail's</h3>   
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
-                <input type="email" placeholder="Email">
-                <input type="email" placeholder="Confirm Email">
-                <input type="password" placeholder="Password">
-                <input type="password" placeholder="Confirm Password">
-                <input type="button" value="Sign up"> 
-                 <p><strong><a href="LogIn.html"> Already a User  </a></strong></p>
+                <input type="text" name="firstname" placeholder="First Name" required>
+                <input type="text" name="lastname" placeholder="Last Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="email" name="cemail" placeholder="Confirm Email" required>
+                <input type="password" name="password" placeholder="Password" required >
+                <input type="password" name="cpassword" placeholder="Confirm Password" required >
+                <input type="submit" name="signup" value="SIGN UP" > 
+                 <p><strong><a href="LogIn.php"> Already a User  </a></strong></p>
            </form>
         </div>
       

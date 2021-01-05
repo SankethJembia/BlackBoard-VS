@@ -1,3 +1,11 @@
+<?php
+   
+   if(isset($_POST["SUBMIT"])){           
+    echo "Signed in:Thank You";
+}
+
+?>
+
 <!DOCTYPE html>
 <html >
 <head>
@@ -52,7 +60,7 @@
            padding: 5px;
            border-bottom: 1px solid peru ;
        }
-       .CenterBox form input[type="button"] {
+       .CenterBox form input[type="submit"] {
            color: rgb(0, 0, 0);
            background-color:coral;
            height: 40px;
@@ -80,10 +88,10 @@
                 <img src="MyProjectLogom (2).png" title="Logo" style="width: 120px; height: 80px; margin: auto; padding-top: 10px; ">
                 <h2> Log in </h2>  
         
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <input type="button" value="Log in"> 
-                 <p ><strong><a  href="SignUp.html"> Create Account  </a></strong></p>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit" name="SUBMIT" value="Log in"> 
+                 <p ><strong><a  href="SignUp.php"> Create Account  </a></strong></p>
            </form>
         </div>
       
