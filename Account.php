@@ -10,9 +10,9 @@ class Account {
              
     public function insert($fn,$ln,$em,$pass){
     
-       
+    
 
-    $this->registeruser($fn,$ln,$em,$pass);
+    $this->registeruser($fn,$ln,$em,$pass);     //calling private funtion 
         
        
      
@@ -33,8 +33,16 @@ class Account {
                                                          
         if($this->connect->query($st)==TRUE){
 
-            echo  "TRUE";
+            echo "<br>Welcome";
+            echo "<br>Redirecting.......";
+ 
+
+        }else{
+
+            echo "User not Found";
         }
+
+                   
             
        
         
@@ -50,7 +58,15 @@ class Account {
          $stmt= "INSERT INTO users(firstname,lastname,email,passward) VALUES('$fn','$ln','$em','$pass')";
                                                   
                                                          
-        $this->connect->query($stmt);
+        if($this->connect->query($stmt)==TRUE){
+            
+            echo "<br>Signed up Succesfully";
+
+            echo "<br> Thanks for Being a Member ";
+           
+        }else{
+            echo "Error Occured";
+        }
 
         
          

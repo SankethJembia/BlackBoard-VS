@@ -1,0 +1,47 @@
+.Leftb {
+    border-width: 8.92px;
+    border-color: rgb(198, 151, 95);
+    border-style: solid;
+    border-radius: 10px;
+    background-color: rgb(54, 54, 54);
+    position: absolute;
+    left: 611px;
+    top: 130px;
+    width: 577.16px;
+    height: 335.16px;
+    z-index: 3;
+  }
+  .Rightb {
+    border-width: 8.92px;
+    border-color: rgb(198, 151, 95);
+    border-style: solid;
+    border-radius: 10px;
+    background-color: rgb(54, 54, 54);
+    position: absolute;
+    left: 170px;
+    top: 130px;
+    width: 577.16px;
+    height: 335.16px;
+    z-index: 4;
+  }
+  .Centreb {
+    border-width: 8.92px;
+    border-color: rgb(198, 151, 95);
+    border-style: solid;
+    border-radius: 10px;
+    background-color: rgb(54, 54, 54);
+    position: absolute;
+    left: 339px;
+    top: 107px;
+    width: 669.16px;
+    height: 389.16px;
+    z-index: 5;
+  }
+  body{
+
+    background-color:lightblue;
+  }
+
+ .container{
+   align-items: center;
+ }
