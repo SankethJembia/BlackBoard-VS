@@ -1,0 +1,154 @@
+html,body{
+     
+  height: 100%;
+  width: 100%;
+  padding: 0;   
+  margin: 0;
+    
+  }
+  
+  
+  .Rounded_Rectangle_ {
+      border-width: 7.63px;
+      border-color: rgb(182, 147, 147);
+      border-style: dashed;
+      border-radius: 10px;
+      background-color: rgba(184, 109, 60, 0.925);
+      position: absolute;
+      width: 1200px;
+      height: 70px;
+      z-index: 2;
+      margin-left: 60px;
+      
+    }
+    .ceter a{
+  
+      
+      font-family: monospace;
+      display: inline-block;
+      position:  relative;
+      margin: 15px 50px;
+      font-size: large;
+      color: rgb(252, 252, 252);
+      font-weight: bolder;
+      text-decoration: solid;
+      
+      
+    }
+    .ceter div{
+      font-family: monospace;
+      display: inline-block;
+      margin: 10px 60px;
+      font-size: large;
+      color: rgb(175, 121, 121);
+      font-weight: bolder;
+      text-decoration: solid;
+      
+
+    }
+
+  
+    .ceter{
+      
+      
+      display: flex;
+       flex-direction: row; 
+    }
+    #container {
+      width: 100%;
+      height: 100%;
+}
+#headcontainer{
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 7px 16px;
+  box-sizing: border-box;
+  border-bottom: 1px solid white;  
+  background-color: antiquewhite;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+
+}
+#Navbar{
+
+  width: 240px;
+  background-color: black;
+  padding-top: 56px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+#mainContainer{
+  padding-top: 100px;
+  display: flex;
+  
+
+}
+#mainContainer.leftpadding{
+  padding-left: 240px;
+  
+
+}
+
+#mContent{
+  padding: 10px 30px;
+  
+}
+
+
+#headcontainer button img{
+  width: 100%;
+  height: 100%;
+}
+.searchbarc{
+  flex: 1;
+  padding-top: 4px;
+
+}
+.searchbarc button img{
+  width: 100%;
+  height: 100%;
+
+}
+.searchbarc form{
+  flex: 1;
+  display: flex;
+}
+
+.searchbarc .searchBar{
+
+  flex: 1;
+  max-width: 600px;
+  color: rgb(39, 49, 58);
+  padding: 2px 6px;
+  font-size: 14px;
+  font-weight: 100;
+  border: 1px solid #ccc;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-right: none;
+  height: 32px;
+  box-shadow: #eee 0px 1px 2px 0px  inset;
+}
+.searchbarc .searchButton{
+  height: 32px;
+  background-color: rgb(202, 189, 171);
+  border: 1px solid thistle;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  cursor: pointer;
+  width: 65px;
+}
+
+
+.profile{
+  position: relative;
+  left: 1229px;
+
+}

@@ -1,2 +1,2 @@
 # BlackBoard-VS
-It is video Streamer 
+It is video Streamering web app 

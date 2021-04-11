@@ -1,5 +1,5 @@
 <?php
-require_once("insertinfo.php");
+require_once("Connectionp.php");
 require_once("Account.php");
 
 
@@ -13,7 +13,8 @@ if(isset($_POST["signup"])){
     $lastname = $_POST['lastname'];
 
     $account->insert($firstname,$lastname,$user,$pass);  //sending inputdata to Accounts class
-          
+    $_SESSION["userLoggedin"]=$user;     
+    header("Location: homebb.html ");
 
    
 }
