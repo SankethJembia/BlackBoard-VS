@@ -1,6 +1,9 @@
 <?php
 
 //header Section ----------------------------------------------
+require_once("Category.php");
+require_once("Entity.php");
+require_once("Entityhub.php");
 
 
 ?>
