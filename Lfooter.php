@@ -5,7 +5,6 @@
 ?>
 
 
-content goes here
                  </div>
 
               </div>

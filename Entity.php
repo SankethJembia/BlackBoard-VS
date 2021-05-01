@@ -3,7 +3,7 @@
 
 class Entity{
 
-
+    
     private $connect,$sqlData;
 
     public function __construct($connect,$input){
@@ -29,6 +29,10 @@ class Entity{
         }
     }
 }
+
+
+
+
     
 
 
