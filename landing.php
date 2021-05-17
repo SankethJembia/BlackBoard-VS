@@ -1,5 +1,5 @@
 <?php
-require_once("Connectionp.php");
+
 require_once("Lheader.php");            //landing page navigation header
 
 

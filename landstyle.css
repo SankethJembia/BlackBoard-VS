@@ -8,28 +8,29 @@ html,body{
   }
   
   
-  .Rounded_Rectangle_ {
+ .Rounded_Rectangle_ {
       border-width: 7.63px;
       border-color: rgb(182, 147, 147);
       border-style: dashed;
       border-radius: 10px;
       background-color: rgba(184, 109, 60, 0.925);
-      position: absolute;
-      width: 1200px;
+      position: fixed;
+      width: 80%;
       height: 70px;
       z-index: 2;
       margin-left: 60px;
       
     }
-    .ceter a{
+    .ceter  a{
   
       
       font-family: monospace;
       display: inline-block;
       position:  relative;
-      margin: 15px 50px;
+      margin-left: 20px;
+      margin-top: 1rem;
       font-size: large;
-      color: rgb(252, 252, 252);
+      color: rgb(255, 255, 255);
       font-weight: bolder;
       text-decoration: solid;
       
@@ -37,8 +38,8 @@ html,body{
     }
     .ceter div{
       font-family: monospace;
-      display: inline-block;
-      margin: 10px 60px;
+      margin-left: 2rem;
+      margin-top: 0.5rem;
       font-size: large;
       color: rgb(175, 121, 121);
       font-weight: bolder;
@@ -52,7 +53,8 @@ html,body{
       
       
       display: flex;
-       flex-direction: row; 
+       flex-direction: row;
+       align-items: unset; 
     }
     #container {
       width: 100%;
@@ -75,7 +77,7 @@ html,body{
 }
 #Navbar{
 
-  width: 240px;
+  width: 200px;
   background-color: black;
   padding-top: 56px;
   position: fixed;
@@ -85,12 +87,11 @@ html,body{
   flex-direction: column;
 }
 #mainContainer{
-  padding-top: 100px;
-  display: flex;
+  padding-top: 80px;
 
 }
 #mainContainer.leftpadding{
-  padding-left: 240px;
+  padding-left: 200px;
   
 
 }
@@ -119,12 +120,13 @@ html,body{
 .searchbarc form{
   flex: 1;
   display: flex;
+  width: 80%;
 }
 
-.searchbarc .searchBar{
+.Rounded_Rectangle_ .searchbarc .searchBar{
 
   flex: 1;
-  max-width: 600px;
+  width: 20%;
   color: rgb(39, 49, 58);
   padding: 2px 6px;
   font-size: 14px;
@@ -148,19 +150,23 @@ html,body{
 
 
 .profile{
-  position: relative;
-  left: 1229px;
-
+position: fixed;
+right: 0;
+z-index: 2;
+top: 15px;
+  
 }
 .categoriesc{
-  position: relative;
+  position: absolute;
+  width: 100%;
+  margin-left: 20px;
   
 }
 .previewclass{
   width: 200px;
   height: 130px;
   display: inline-flex;
-  margin-right: 7PX;
+  margin: 30px 30px;
 }
 .previewclass img{
   width: 100%;
@@ -170,3 +176,199 @@ html,body{
   flex-direction: column;
   
 }
+.supercat{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 200px;
+}
+
+.supercat .leftpadding{
+  padding-left: 240px;
+  
+
+}
+.entities{
+ 
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+}
+.h2{
+  color: black;
+   
+}
+a {
+  text-decoration: none;
+}
+a h2:hover{
+  color: chocolate;
+}
+
+
+
+
+
+.watchBox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
+
+}
+.watchBox .player {
+  width: 50%;
+  border-width: 7.63px;
+  border-color: #d8914c;
+  border-style: ridge;
+  border-radius: 20px;
+  background-color: #23201e;
+  padding: 15px 20px;
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.watchBox .col2 {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  width: 50%;
+  margin-left: 10px;
+
+
+}
+
+.videoinfo{
+
+   width: 100%;
+   padding: 20px 0px;
+
+
+}
+
+.videoinfo h1 {
+  display: block;
+  font-size: 40px;
+  font-weight: 400;
+
+}
+
+
+
+ .suggestions{
+  
+  flex-grow: 1;
+  height: 100%;
+  padding-left: 24px;
+  z-index: 3;
+
+
+}
+.gridClass{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.suggestions .itemGrid{
+      display: flex;
+      height: auto;  
+      margin-left: 10px;    
+
+}
+
+.itemGrid{
+  margin-right: 4px;
+  margin-bottom: 24px;
+}
+.itemGrid .thumbnail{
+  width: 280px;
+  height: 210px;
+  position: relative;
+
+}
+.suggestions .itemGrid .thumbnail{
+  
+  margin-right: 8px;
+
+
+}
+
+.itemGrid .thumbnail img{
+
+width: 100%;
+height: 100%;
+
+}
+
+.itemGrid .thumbnail .duration{
+       
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    margin: 4px;
+    color: #ccc;
+    background-color: #23201e;
+    padding: 2px 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+
+
+}
+
+  .itemGrid .info{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+  }
+
+  .suggestions .itemGrid .info{
+    padding-right: 0;
+    flex: 1;
+  }
+
+  .itemGrid .info h3{
+    margin: 8px 0;
+    max-height: 32px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: bisque;
+  }
+
+  .previewclass h5{
+  
+    position: absolute;
+    margin: 4px;
+    color: #ccc;
+    background-color: #23201e;
+    padding: 2px 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+
+
+
+  }
+
+  .thumbnailb{
+
+    border-width: 11px;
+  border-color: #d8914c;
+  border-style: ridge;
+  border-radius: 20px;
+  background-color: #23201e;
+  padding: 1px 1px;
+  }

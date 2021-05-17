@@ -5,6 +5,25 @@ class Entityhub{
 
         
 
+
+  public static function getCatEntities($connect,$id){
+
+    $query=$connect->prepare("SELECT * FROM entities WHERE categoryId=?");  //this query will print the entities relating to its Category Id
+    $query->bind_param("i",$id);
+    $query->execute();
+  
+  
+    $r =  $query->get_result();    
+  
+    $re=array();
+  
+     while($ro=$r->fetch_assoc()){
+       $re[]=new Entity($connect,$ro);
+     }
+    
+     return $re;
+  }
+
     public static function getEntity($connect,$categoryId,$limit){ 
         
         $sql = " SELECT * FROM entities WHERE categoryId=?  ORDER BY RAND() LIMIT ? "; //sql query

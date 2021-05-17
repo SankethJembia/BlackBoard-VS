@@ -6,7 +6,7 @@ $(document).ready(function(){
     var navb=$("#Navbar");          //referencing the style classes from landing page 
 
         
-           if(mainc.hasClass("leftpadding")){   //check if it has the padding 
+           if(mainc.hasClass("leftpadding") ){   //check if it has the padding 
               
             navb.hide();                      //if it has padding then it will hide
 

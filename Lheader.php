@@ -1,11 +1,13 @@
 <?php
 
-//header Section ----------------------------------------------
+require_once("Connectionp.php");//header Section ----------------------------------------------
 require_once("Category.php");
 require_once("Entity.php");
 require_once("Entityhub.php");
 require_once("Preview.php");
-
+require_once("VideoDetails.php");
+require_once("SuggestionC.php");
+require_once("VideoGridC.php");
 
 ?>
 
@@ -45,7 +47,7 @@ require_once("Preview.php");
                                  <form action="search.php" method="GET">
 
                                   <input type="text" class="searchBar" name="term" placeholder="search  here...." style="flex: 1;">
-                                  <button class="searchButton" style="width: 40px;;">
+                                  <button class="searchButton" style="width: 40px;">
 
                                     <img src="Resourses/search_button.png" >
                                   </button>
@@ -55,22 +57,25 @@ require_once("Preview.php");
 
                                  </form>
                         </div>
+                        
+                
                              
-                </div>
+                 </div>
                  
 
-              </div> 
-                <div class="profile"> 
-                <a href="profile.html">
-                <img src="Resourses/profile_ic.png" width="60px" >
-               </a> 
-              </div>
+               </div> 
+             
             </div>
+                            <div class="profile"> 
+                              <a href="profile.html">
+                              <img src="Resourses/profile_ic.png" width="60px" >
+                               </a> 
+                            </div>
           
               <div id="Navbar" style="display: none;">
              </div>      
               <div id="mainContainer" >
-                 
                  <div id="mContent">
+                   
 
               
