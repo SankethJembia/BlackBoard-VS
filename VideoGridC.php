@@ -59,6 +59,32 @@ private function createInfo(){ //displaying the thumbnail information
                  ";
 
 }
+private function createResultGrid($videos,$title){
+
+  $thumbnail = $this->createThumbnail();
+  $info = $this->createInfo();
+  $url = "Watchpage.php?id=". $this->video->getId(); //click url when thumbnails are clicked they are passed to watch page with id
+              
+                           //making a grid for the Itema(videos) and its information
+  return "<a href='$url'>
+                         
+               <div class='itemGrid thumbnailb'>
+ 
+               $thumbnail
+               $info
+ 
+               </div>
+         </a>";
+ 
+ 
+ }
+
+public function showResult($videos,$title){
+      
+   
+    echo $this->createResultGrid($videos,$title);
+
+}
 
 }
 

@@ -23,9 +23,8 @@ class SuggestionC{
 
     }
     else {
-      echo "entered else block";
 
-        $gridVideos = $this->getItemsFromVideos($videos);
+        $gridVideos = $this->getItemsFromVideos($videos);   //for searching a video
        
 
     }
@@ -57,7 +56,20 @@ class SuggestionC{
 
   }
 
-  public function getItemsFromVideos($videos){
+  public function getItemsFromVideos($videos){    //displaying the array of searched videos one bye one
+
+     $videoElements = "";
+     foreach($videos as $video){
+       $item = new VideoGridC($video);    
+       $videoElements.=$item->createGrid();
+     } 
+     
+     return $videoElements;
+
+  }
+  public function getResultItems($videos){    //call from search page
+
+    echo  $this->generateVideos($videos);      //call to class function
 
 
   }

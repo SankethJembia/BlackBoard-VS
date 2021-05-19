@@ -39,8 +39,8 @@ require_once("VideoGridC.php");
 
            <div class="Rounded_Rectangle_">
               <div class="ceter">
-                  <a href="">Home</a>
-                  <a href="">Projects</a>
+                  <a href="landing.php">Home</a>
+                  <a href="ShowCategory.php">Category</a>
                   <a href="">Practice</a>
                   <a href="">Upload</a>
                        <div class="searchbarc">
