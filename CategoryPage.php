@@ -10,7 +10,7 @@ if(!isset($_GET["id"])){    //will set the id of a clicked video
 
 }
 
-$cat=new Category($connect);
+$cat=new Category($connect,$user);
 echo $cat-> showCategory($_GET["id"]);
 
 

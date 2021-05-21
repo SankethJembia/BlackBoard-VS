@@ -1,13 +1,10 @@
 <?php
-
 require_once("Lheader.php");            //landing page navigation header
 
+echo "user logged in as".$user;
 
-//if(!isset($_SESSION["userLoggedin"])){   //user session check after sigining in 
-   
-  //  header("Location : LogIn.html");
+echo $userobj->getFirstname();   //user nav logout setting page profile page
 
-//}
 require_once("Lfooter.php");       //landing page footer
 ?>
 

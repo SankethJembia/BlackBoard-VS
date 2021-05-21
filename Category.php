@@ -2,12 +2,12 @@
 
 class Category{
 
-private $connect,$firstname;
+private $connect,$user;
 
- public function __construct($connect){
+ public function __construct($connect,$user){
 
      $this->connect=$connect;
-   // $this->firstname=$firstname;
+     $this->user=$user;
 
  }
 
@@ -17,7 +17,7 @@ public function showCategory($id){
 
    $cats=""; //printing those entities in  the page
       
-   $pre = new Preview($this->connect); //preview object
+   $pre = new Preview($this->connect,$this->user); //preview object
    foreach($rs as $r){   
 
      $cats .=$pre->createCatEntityPreview($r);    //call to the preview creation function
@@ -59,7 +59,7 @@ public function showCategory($id){
 
       $entityblock=""; //printing those entities in  the page
       
-      $previews = new Preview($this->connect); //preview object
+      $previews = new Preview($this->connect,$this->user); //preview object
       foreach($entities as $entity){   
 
         $entityblock .=$previews->createEntityPreview($entity);    //call to the preview creation function

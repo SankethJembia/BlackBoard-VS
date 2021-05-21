@@ -12,10 +12,16 @@ if(isset($_POST["signup"])){
     $firstname = $_POST['firstname'];  
     $lastname = $_POST['lastname'];
 
-    $account->insert($firstname,$lastname,$user,$pass);  //sending inputdata to Accounts class
-    $_SESSION["userLoggedin"]=$user;     
-    header("Location: homebb.html ");
-
+    $result =$account->insert($firstname,$lastname,$user,$pass);  //sending inputdata to Accounts class
+         
+        if($result == TRUE){
+         $_SESSION["userLoggedin"]=$user;     //pass the user into the session
+         header("Location: landing.php ");         
+    
+        }else {
+            header("Location:signUp.html");
+            echo "Error Occured Try Again";
+        }
    
 }
 

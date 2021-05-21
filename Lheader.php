@@ -8,6 +8,23 @@ require_once("Preview.php");
 require_once("VideoDetails.php");
 require_once("SuggestionC.php");
 require_once("VideoGridC.php");
+require_once("NavigationMenu.php");
+require_once("Users.php");
+
+if(!isset($_SESSION["userLoggedin"])){   //userloggedin value will be passed from the signup or login page   
+                                          //if it is not set it will take you to log in page
+  header("Location : LogIn.html");
+  
+}else{                                   //if the value is set it will store the value in the variable 
+   
+  $user=$_SESSION["userLoggedin"];
+
+  $userobj=new Users($connect,$user);     //storing the user data in the object  
+
+  
+  
+}
+
 
 ?>
 
@@ -73,6 +90,15 @@ require_once("VideoGridC.php");
                             </div>
           
               <div id="Navbar" style="display: none;">
+                  <?php
+                             
+                             $navMenu = new NavigationMenu($connect,$user); //creating the menu links
+                             echo $navMenu->createLinks();                
+
+
+
+                ?> 
+
              </div>      
               <div id="mainContainer" >
                  <div id="mContent">

@@ -2,10 +2,11 @@
 
 class Preview{        //preview class
 
-    private $connect;
+    private $connect,$user;
   
-    public function __construct($connect){   //connection init
+    public function __construct($connect,$user){   //connection init  userloogin
          $this->connect=$connect;
+         $this->user=$user;
     }
 
 

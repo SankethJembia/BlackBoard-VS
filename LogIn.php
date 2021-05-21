@@ -8,10 +8,17 @@ $account=new Account($connect);  //created an accout obj for managing the user a
     $user = $_POST['email']; 
     $pass = $_POST['password']; 
 
-    $account->login($user,$pass);
-     $_SESSION["userLoggedin"]=$user;
-     header("Location: landing.php ");
- 
+    $res = $account->login($user,$pass);
+     
+    
+    if($res == TRUE){
+         $_SESSION["userLoggedin"]=$user;  //pass the user into session
+         header("Location: landing.php ");
+    }else{
+      header("Location:LogIn.html");
+      echo "User not Found";
+    }
+    
     
 }
 
