@@ -13,7 +13,7 @@ require_once("Users.php");
 
 if(!isset($_SESSION["userLoggedin"])){   //userloggedin value will be passed from the signup or login page   
                                           //if it is not set it will take you to log in page
-  header("Location : LogIn.html");
+  header("Location : LogIn.php");
   
 }else{                                   //if the value is set it will store the value in the variable 
    
