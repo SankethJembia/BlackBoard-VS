@@ -17,9 +17,6 @@ class NavigationMenu{
                <a href='landing.php'>
                  <span> HOME </span>
                </a>        
-               <a href='Settings.php'>
-                 <span> SETTINGS </span>
-               </a>    
                <a href='Logout.php'>
                  <span> LOG OUT </span>
                </a>              

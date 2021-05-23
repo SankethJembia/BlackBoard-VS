@@ -35,6 +35,48 @@ class Account {                                                    //account cla
         
     
         }
+        public function updateDetails($fn,$ln,$user){              //update function 
+
+            $this->validateFirstName($fn);          //checking first name
+            $this->validateLastName($ln);         //checking last name
+                     
+            if(empty($this->errorArray)) {
+                $stmt= "UPDATE users SET firstname=?, lastname=? Where email=?";     //update query
+                                                  
+                                                         
+                $qry= $this->connect->prepare($stmt); 
+                 
+                $qry->bind_param("sss",$fn,$ln,$user);
+                $qry->execute();
+
+
+                return TRUE;
+
+
+
+
+            }
+
+
+        }
+        public function updatePass($oldPass,$newPass,$cNewPass,$user){  
+            $this->validateOldpass($oldPass,$user);   //first checks the users old password
+            $this->validatePasswords($newPass,$cNewPass); //then it validates the new Password
+
+     
+                       if(empty($this->errorArray)) {
+                              $stmt= "UPDATE users SET passward=? Where email=?";     //update query
+                                          
+                                                 
+                                  $qry= $this->connect->prepare($stmt); 
+         
+                                  $qry->bind_param("ss",$newPass,$user);
+                                  $qry->execute();
+
+                                   return TRUE;
+      }
+    }
+    
 
     private function logchck($em,$pass){  //checks if both email and pass matches or not
 
@@ -120,6 +162,24 @@ private function validatePasswords($pass, $pass2) {   // compare passwords
     if(strlen($pass) < 5 || strlen($pass) > 25) {    //if matched check the length of passwords
         array_push($this->errorArray, "Your password must be between 5 and 25 characters");
     }
+}
+private function validateOldpass($oldPass,$user){
+
+    
+   
+        $stmte= "SELECT * From users Where  passward= ?  AND  email= ?";     //Checks the password matches with user email
+                                          
+                                                 
+        $resut=$this->connect->prepare($stmte);
+        $resut->bind_param("ss",$oldPass,$user); //binding....
+        $resut->execute();        
+        $resut->store_result();  //storing the results
+    
+        if($resut->num_rows()==0){             
+            array_push($this->errorArray, "Your Old Password is Incorrect");
+          }
+
+
 }
 
 public function getError($error) {            //a error string will be passed through this 

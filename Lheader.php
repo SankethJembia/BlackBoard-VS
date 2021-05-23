@@ -58,8 +58,7 @@ if(!isset($_SESSION["userLoggedin"])){   //userloggedin value will be passed fro
               <div class="ceter">
                   <a href="landing.php">Home</a>
                   <a href="ShowCategory.php">Category</a>
-                  <a href="">Practice</a>
-                  <a href="">Upload</a>
+                  <a href="Articles.php">Articles</a>
                        <div class="searchbarc">
                                  <form action="search.php" method="GET">
 
@@ -84,7 +83,7 @@ if(!isset($_SESSION["userLoggedin"])){   //userloggedin value will be passed fro
              
             </div>
                             <div class="profile"> 
-                              <a href="profile.html">
+                              <a href="profile.php">
                               <img src="Resourses/profile_ic.png" width="60px" >
                                </a> 
                             </div>
