@@ -1,5 +1,6 @@
 # BlackBoard-VS
-It is video Streamering web app 
+It is video Streamer
+clone to Youtube ,Netflix etc...
 
 CHECK THE DEMO --------\/
 https://youtu.be/HyPAqzbMyf8
