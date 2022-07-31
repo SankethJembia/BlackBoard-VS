@@ -3,7 +3,7 @@
 session_start();
 session_destroy();
 
-header("Location: homebb.html");
+header("Location: index.html");
 
 
 
